@@ -1,0 +1,231 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  background: #f0f4f8;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #0077cc, #00aaff);
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+header button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  padding: 0.6rem;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+header button:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Summary Cards */
+.summary {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #0077cc;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Form Section */
+.form-section,
+.list-section {
+  margin: 1.5rem;
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h2,
+.list-section h2 {
+  margin-bottom: 1rem;
+  color: #0077cc;
+}
+
+form {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+form input,
+form select,
+form button {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  flex: 1;
+  min-width: 160px;
+  transition: all 0.2s;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #0077cc;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 119, 204, 0.3);
+}
+
+form button {
+  background: linear-gradient(90deg, #0077cc, #00aaff);
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  flex: none;
+}
+
+form button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+table th {
+  background: #0077cc;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table tr:nth-child(even) {
+  background: #f9fcff;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #e6f0fa;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 12px;
+  width: 120px;
+  margin: auto;
+  position: relative;
+}
+
+.progress {
+  background: linear-gradient(90deg, #0077cc, #00aaff);
+  height: 100%;
+  width: 0;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Buttons in table */
+table button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: none;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+table button:hover {
+  transform: scale(1.05);
+}
+
+table button:first-child {
+  background: #00a86b;
+  color: white;
+}
+
+table button:last-child {
+  background: #e63946;
+  color: white;
+}
+
+/* Dark Theme */
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark header {
+  background: linear-gradient(90deg, #222, #333);
+}
+
+body.dark .card,
+body.dark .form-section,
+body.dark .list-section {
+  background: #1e1e1e;
+  color: #eee;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark table th {
+  background: #333;
+}
+
+body.dark table tr:nth-child(even) {
+  background: #222;
+}
